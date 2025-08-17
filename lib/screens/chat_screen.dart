@@ -144,8 +144,6 @@ class _ChatScreenState extends State<ChatScreen> {
                     itemCount: _messages.length,
                     itemBuilder: (context, index) {
                       final message = _messages[index];
-                      final isFirstInGroup = index == 0 ||
-                          _messages[index - 1].senderId != message.senderId;
                       final isLastInGroup = index == _messages.length - 1 ||
                           _messages[index + 1].senderId != message.senderId;
                       

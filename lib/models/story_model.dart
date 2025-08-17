@@ -36,17 +36,12 @@ class StoryModel {
     required this.lastUpdated,
   }) : id = id ?? const Uuid().v4();
 
-  bool get isViewed {
-    // Consider a story viewed if all items have been viewed by the current user
-    return items.every((item) => item.isViewedBy('currentUserId'));
-  }
+
   
   bool isFullyViewed() {
     // Consider a story fully viewed if all items have been viewed by the current user
     return items.every((item) => item.isViewedBy('currentUserId'));
   }
 
-  StoryItem get latestStory => items.reduce(
-        (value, element) => value.timestamp.isAfter(element.timestamp) ? value : element,
-      );
+
 }

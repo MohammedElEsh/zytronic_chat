@@ -196,11 +196,6 @@ class ChatBubble extends StatelessWidget {
             ),
           ],
         );
-      default:
-        return Text(
-          message.content,
-          style: TextStyle(color: textColor),
-        );
-    }
+      }
   }
 }

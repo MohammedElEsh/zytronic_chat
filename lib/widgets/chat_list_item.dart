@@ -195,9 +195,7 @@ class ChatListItem extends StatelessWidget {
         return '🎤 Voice message';
       case MessageType.video:
         return '📹 Video';
-      default:
-        return message.content;
-    }
+      }
   }
 
   String _formatTime(DateTime timestamp) {

@@ -20,23 +20,4 @@ class ChatModel {
     required this.lastUpdated,
   });
 
-  ChatModel copyWith({
-    String? id,
-    UserModel? contact,
-    MessageModel? lastMessage,
-    int? unreadCount,
-    bool? isMuted,
-    bool? isPinned,
-    DateTime? lastUpdated,
-  }) {
-    return ChatModel(
-      id: id ?? this.id,
-      contact: contact ?? this.contact,
-      lastMessage: lastMessage ?? this.lastMessage,
-      unreadCount: unreadCount ?? this.unreadCount,
-      isMuted: isMuted ?? this.isMuted,
-      isPinned: isPinned ?? this.isPinned,
-      lastUpdated: lastUpdated ?? this.lastUpdated,
-    );
-  }
 }
